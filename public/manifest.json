@@ -3,8 +3,8 @@
   "name": "Counter, Stopwatch & Timer",
   "icons": [
     {
-      "src": "clock.png",
-      "sizes": "256x256",
+      "src": "me.jpg",
+      "sizes": "150x150",
       "type": "image/png"
     }
   ],

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 import { useAppSelector, useAppDispatch } from '../../app/hooks';
 import {
@@ -14,7 +14,7 @@ import styles from './Counter.module.css';
 export function Counter() {
   const count = useAppSelector(selectCount);
   const dispatch = useAppDispatch();
-  const [incrementAmount, setIncrementAmount] = useState('2');
+  const [incrementAmount, setIncrementAmount] = useState('1');
 
   const incrementValue = Number(incrementAmount) || 0;
 
@@ -37,7 +37,7 @@ export function Counter() {
           +
         </button>
       </div>
-      <div className={styles.row}>
+      <div className={styles.column}>
         <input
           className={styles.textbox}
           aria-label="Set increment amount"
