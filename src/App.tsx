@@ -1,7 +1,7 @@
 import { 
 	BrowserRouter as Router,
 	Route,
-  Link
+  NavLink
 } from 'react-router-dom';
 import { Counter } from './features/counter/Counter';
 import Stopwatch from './features/stopwatch/Stopwatch';
@@ -14,9 +14,9 @@ function App() {
     <Router>
       <div className="App">
         <div id="Navbar">
-          <div><Link className='navlink' to='/'>Counter</Link></div>
-          <div><Link className='navlink' to='/Stopwatch'>Stopwatch</Link></div>
-          <div><Link className='navlink' to='/Timer'>Timer</Link></div>
+          <div><NavLink className='navlink' activeClassName='selectedLink' exact to='/'>Counter</NavLink></div>
+          <div><NavLink className='navlink' activeClassName='selectedLink' to='/Stopwatch'>Stopwatch</NavLink></div>
+          <div><NavLink className='navlink' activeClassName='selectedLink' to='/Timer'>Timer</NavLink></div>
         </div>
         <div id='Container'>
           <Route exact path='/' component={ Counter } />

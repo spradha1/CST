@@ -1,6 +1,5 @@
 .row {
   display: flex;
-  align-items: center;
   justify-content: center;
   margin: 25px 0;
 }
@@ -29,19 +28,6 @@
   font-family: 'Courier New';
 }
 
-.button {
-  font-size: 32px;
-  outline: none;
-  border: 2px solid transparent;
-  color: rgb(0, 180, 0);
-  padding: 8px 16px;
-  cursor: pointer;
-  background-color: black;
-  border-radius: 2px;
-  transition: all 0.15s;
-  font-family: Ubuntu;
-}
-
 .textbox {
   font-size: 32px;
   padding: 2px;
@@ -56,12 +42,23 @@
   outline: none;
 }
 
+.button {
+  font-size: 32px;
+  outline: none;
+  border: 2px solid transparent;
+  color: rgb(0, 180, 0);
+  padding: 8px 16px;
+  cursor: pointer;
+  background-color: black;
+  border-radius: 2px;
+  transition: all 0.15s;
+  font-family: Ubuntu;
+}
 .button:hover,
 .button:focus {
   border: 2px solid rgb(0, 180, 0);
   border-radius: 10px;
 }
-
 .button:active {
   background-color: rgba(33, 199, 102, 0.4);
 }
