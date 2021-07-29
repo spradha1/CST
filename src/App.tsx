@@ -1,5 +1,4 @@
-import { 
-	BrowserRouter as Router,
+import {
 	Route,
   NavLink
 } from 'react-router-dom';
@@ -11,20 +10,18 @@ import './App.css';
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <div id="Navbar">
-          <div><NavLink className='navlink' activeClassName='selectedLink' exact to='/'>Counter</NavLink></div>
-          <div><NavLink className='navlink' activeClassName='selectedLink' to='/Stopwatch'>Stopwatch</NavLink></div>
-          <div><NavLink className='navlink' activeClassName='selectedLink' to='/Timer'>Timer</NavLink></div>
-        </div>
-        <div id='Container'>
-          <Route exact path='/' component={ Counter } />
-          <Route exact path='/Stopwatch' component={ Stopwatch } />
-          <Route exact path='/Timer' component={ Timer } />
-        </div>
+    <div className="App">
+      <div id="Navbar">
+        <div><NavLink className='navlink' activeClassName='selectedLink' exact to='/'>Counter</NavLink></div>
+        <div><NavLink className='navlink' activeClassName='selectedLink' to='/Stopwatch'>Stopwatch</NavLink></div>
+        <div><NavLink className='navlink' activeClassName='selectedLink' to='/Timer'>Timer</NavLink></div>
       </div>
-    </Router>
+      <div id='Container'>
+        <Route exact path='/' component={ Counter } />
+        <Route exact path='/Stopwatch' component={ Stopwatch } />
+        <Route exact path='/Timer' component={ Timer } />
+      </div>
+    </div>
   );
 }
 
