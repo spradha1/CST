@@ -1,0 +1,78 @@
+.Timer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+
+.textbox {
+  font-size: 32px;
+  padding: 5px;
+  width: 64px;
+  text-align: center;
+  border-radius: 10px;
+  border: 2px solid rgb(32, 32, 32);
+  color: white;
+  background: rgb(32, 32, 32);
+}
+.textbox:focus {
+  outline: none;
+}
+
+
+.row > button {
+  margin: 0 8px;
+}
+.row > input {
+  margin: 0 10px;
+}
+
+.button {
+  font-size: 32px;
+  outline: none;
+  border: 2px solid transparent;
+  color: rgb(0, 180, 0);
+  padding: 8px 16px;
+  cursor: pointer;
+  background-color: black;
+  border-radius: 2px;
+  font-family: Ubuntu;
+}
+.button:hover {
+  border: 2px solid rgb(0, 180, 0);
+  border-radius: 10px;
+}
+.button:active {
+  background-color: rgba(33, 199, 102, 0.4);
+}
+
+
+.Clock {
+  font-family: 'Courier New';
+  font-size: 64px;
+  margin-bottom: 40px;
+  background: black;
+}
+
+.Ring {
+  animation: blinker 1s steps(2) 0s infinite normal forwards;
+}
+
+@keyframes blinker {
+  from {
+    color: white;
+  }
+  to {
+    color: rgb(0, 180, 0);
+  }
+}

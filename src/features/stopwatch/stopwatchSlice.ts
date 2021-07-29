@@ -1,10 +1,10 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import { fetchSeconds } from './stopwatchAPI';
+import { delaySecond } from './stopwatchAPI';
 
 
-export const incrementAsync = createAsyncThunk('counter/fetchSeconds',
+export const incrementAsync = createAsyncThunk('stopwatch/delaySecond',
   async () => {
-    await fetchSeconds();
+    await delaySecond();
     return;
   }
 );

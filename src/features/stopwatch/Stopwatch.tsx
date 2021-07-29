@@ -1,7 +1,7 @@
 import { useAppSelector, useAppDispatch } from '../../app/hooks';
 import { startStop, reset } from './stopwatchSlice';
 import styles from './Stopwatch.module.css';
-import { incrementAsync } from '../stopwatch/stopwatchSlice';
+import { incrementAsync } from './stopwatchSlice';
 
 
 function Stopwatch () {
