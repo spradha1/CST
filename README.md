@@ -1,6 +1,6 @@
 # Counter, Stopwatch & Timer (CST)
 
-In addition to the counter template from Redux, the app aims to add routes for a stopwatch and a timer like that of Google Pixel phone.
+In addition to the counter template from Redux, the app aims to add routes for a stopwatch and a timer like that of Google Pixel phone. The application is live [here](https://spradha1.github.io/cst).
 
 ## Installation & Deployment
 
@@ -20,10 +20,14 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Testing & Linting
 
-In the project directory, test all *.ts & *.tsx files.
+In the project directory, test all *.spec.ts files with
 
     npm test
 
-Eslint for linting
+The project uses eslint for linting with
 
     npm run lint
+
+## External assets
+
+The sound for the timer was taken from [Coder Rocket Fuel](https://coderrocketfuel.com/).

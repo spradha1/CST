@@ -1,23 +1,35 @@
-.row {
-  display: flex;
-  justify-content: center;
-  margin: 25px 0;
-}
-
-.row, .column > button {
-  margin: 8px 8px 0 8px;
-}
-
-.row:not(:last-child) {
-  margin-bottom: 16px;
-}
-
-.column {
+.Counter {
+  height: inherit;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.row, .column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 25px 0;
+}
+
+.row {
+  flex-direction: row;
+}
+.column {
+  flex-direction: column;
+}
+
+.row > button {
+  margin: 0 8px;
+}
+
+.column > button {
+  margin: 8px 0;
+}
+
+.row:not(:last-child) {
+  margin-bottom: 12px;
 }
 
 .value {
@@ -25,7 +37,7 @@
   padding-left: 16px;
   padding-right: 16px;
   margin-top: 2px;
-  font-family: 'Courier New';
+  font-family: 'Ubuntu';
 }
 
 .textbox {
@@ -37,27 +49,25 @@
   color: white;
   border: 2px solid white;
   background: black;
+  font-family: 'Ubuntu';
 }
 .textbox:focus {
   outline: none;
 }
 
 .button {
-  font-size: 32px;
+  font-size: 28px;
   outline: none;
   border: 2px solid transparent;
+  border-radius: 10px;
   color: rgb(0, 180, 0);
   padding: 8px 16px;
   cursor: pointer;
   background-color: black;
-  border-radius: 2px;
-  transition: all 0.15s;
   font-family: Ubuntu;
 }
-.button:hover,
-.button:focus {
+.button:hover {
   border: 2px solid rgb(0, 180, 0);
-  border-radius: 10px;
 }
 .button:active {
   background-color: rgba(33, 199, 102, 0.4);
@@ -85,4 +95,38 @@
   width: 0%;
   opacity: 1;
   transition: 0s;
+}
+
+
+/* responsive styles */
+
+@media screen and (max-width: 725px) {
+
+  .Counter {
+    justify-content: space-evenly;
+  }
+
+  .rowToCol {
+    flex-direction: column;
+  }
+  .rowToCol > button {
+    margin: 8px 0;
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
+
+
+@media screen and (max-height: 450px) and (orientation: landscape) {
+
+  .rowToCol {
+    flex-direction: row;
+  }
+  .rowToCol > button {
+    margin: 0 4px;
+    font-size: 20px;
+    font-weight: normal;
+    text-transform: normal;
+  }
 }

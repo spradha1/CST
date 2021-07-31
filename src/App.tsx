@@ -12,9 +12,9 @@ function App() {
   return (
     <div className="App">
       <div id="Navbar">
-        <div><NavLink className='navlink' activeClassName='selectedLink' exact to='/'>Counter</NavLink></div>
-        <div><NavLink className='navlink' activeClassName='selectedLink' to='/Stopwatch'>Stopwatch</NavLink></div>
-        <div><NavLink className='navlink' activeClassName='selectedLink' to='/Timer'>Timer</NavLink></div>
+        <div><NavLink className='navlink' activeClassName='selectedLink' exact to='/' replace >Counter</NavLink></div>
+        <div><NavLink className='navlink' activeClassName='selectedLink' to='/Stopwatch' replace >Stopwatch</NavLink></div>
+        <div><NavLink className='navlink' activeClassName='selectedLink' to='/Timer' replace >Timer</NavLink></div>
       </div>
       <div id='Container'>
         <Route exact path='/' component={ Counter } />

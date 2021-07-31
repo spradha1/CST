@@ -69,27 +69,29 @@ function Timer () {
   }
   
   return (
-    <div className='Timer'>
-      {setting && <div className={styles.row}>
-        <input
-          className={styles.textbox}
-          id='minutes'
-          maxLength={2}
-          aria-label="Set minutes"
-          value={inputMinute}
-          autoComplete='off'
-          onChange={(e) => setInputMinute(e.target.value)}
-        /> m
-        <input
-          className={styles.textbox}
-          id='seconds'
-          maxLength={2}
-          aria-label="Set seconds"
-          value={inputSecond}
-          autoComplete='off'
-          onChange={(e) => setInputSecond(e.target.value)}
-        /> s
-      </div>}
+    <div className={styles.Timer}>
+      {setting && 
+        <div className={styles.row}>
+          <input
+            className={styles.textbox}
+            id='minutes'
+            maxLength={2}
+            aria-label="Set minutes"
+            value={inputMinute}
+            autoComplete='off'
+            onChange={(e) => setInputMinute(e.target.value)}
+          /> m
+          <input
+            className={styles.textbox}
+            id='seconds'
+            maxLength={2}
+            aria-label="Set seconds"
+            value={inputSecond}
+            autoComplete='off'
+            onChange={(e) => setInputSecond(e.target.value)}
+          /> s
+        </div>
+      }
       {!setting && 
         <div className={styles.Clock}>
           <div className={ringing ? styles.Ring : ''}>

@@ -1,8 +1,9 @@
 .Timer {
+  height: inherit;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   align-items: center;
+  justify-content: center;
 }
 
 
@@ -12,6 +13,7 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 40px;
+  font-size: 32px;
 }
 
 
@@ -30,9 +32,6 @@
 }
 
 
-.row > button {
-  margin: 0 8px;
-}
 .row > input {
   margin: 0 10px;
 }
@@ -40,6 +39,7 @@
 .button {
   font-size: 32px;
   outline: none;
+  margin: 0 8px;
   border: 2px solid transparent;
   color: rgb(0, 180, 0);
   padding: 8px 16px;
@@ -58,7 +58,7 @@
 
 
 .Clock {
-  font-family: 'Courier New';
+  font-family: 'Ubuntu';
   font-size: 64px;
   margin-bottom: 40px;
   background: black;
@@ -75,4 +75,32 @@
   to {
     color: rgb(0, 180, 0);
   }
+}
+
+
+@media screen and (max-width: 525px) {
+
+  .Timer {
+    justify-content: space-evenly;
+  }
+
+  .row:last-child {
+    flex-direction: column;
+  }
+
+  .row {
+    font-size: 28px;
+  }
+
+  .Clock {
+    font-size: 48px;
+  }
+
+  .button {
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 8px 0;
+  }
+
 }

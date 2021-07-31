@@ -3,7 +3,6 @@
   text-align: center;
   background-color: black;
   color: white;
-  font-size: calc(10px + 2vmin);
 }
 
 #Navbar {
@@ -13,6 +12,7 @@
   flex-direction: row;
   justify-content: center;
   font-family: Ubuntu;
+  font-size: calc(10px + 2vmin);
 }
 #Navbar > div {
   height: 9vh;
@@ -33,10 +33,31 @@
 }
 
 
+
 #Container {
   height: 85vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+
+/* responsive styles */
+
+@media (max-width: 500px), (max-height: 500px) {
+
+  #Navbar {
+    height: 60px;
+  }
+  #Navbar > div {
+    margin: 10px;
+    height: 45px;
+    font-size: 20px;
+  }
+
+  #Container {
+    height: calc(100vh - 65px);
+  }
+
 }
